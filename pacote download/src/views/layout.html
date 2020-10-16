@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+    <!-- HTML => linguagem de marcação de hypertexto Hypertexto hipertexto => são links da página html Markup marcação de texto Language Linguagem -->
+
+    <head>
+        <!--Configurações especiais da página-->
+        <meta charset="UTF-8">
+        <!--caracteres especiais como ç , acento, ...-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--para configurar nosso site para tela de diversos tamanhos-->
+        
+        {% block title %}
+        <title>Ecoleta</title>
+        {% endblock title %}
+        
+
+        <!--pegar fontes novas -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        
+
+        <!--Referências aos elementos-->
+        <link rel="stylesheet" href="/styles/main.css">
+        
+        {% block styles %}
+        {% endblock styles %}
+        
+        <!--responsive.css => Este arquivo sempre fica por último-->
+        <link rel="stylesheet" href="/styles/responsive.css">
+
+    </head>
+
+    <body>
+        <!--É uma forma de identificar um elemento e deve ser única assim como o CPF. pode-se atribuir formatação a um elemento especial-->
+        <div id = "{{bodyId}}" >
+            <!--div => é um elemento de nivel de bloco -->
+
+            {% block content %}
+            {% endblock content %}
+
+        </div>
+
+        {% block modal %}
+        {% endblock modal %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+
+    </body>
+</html>

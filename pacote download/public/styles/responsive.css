@@ -1,0 +1,61 @@
+/*@media() => conjunto de regras para ajustar a pagina html para qualquer dispositivo:
+celular, laptop, smart tv*/
+
+/* configuração para a largura da tela fica no maximo */
+@media(max-width:900px){
+    #page-home{
+        background-position-x: 70vw;
+    }
+
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home .content header a{
+        /* Absolute => você pode posicionar qualquer elemento de acordo
+        que o elemento pai tenha uma position diferente de static*/
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+
+        /* Reposiciona o elemento na direção do eixo X*/
+        transform: translateX(-50%);
+    }
+
+    #page-home .content main{
+        align-items: center;
+    }
+
+    #page-search-results main .cards{
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results main .cards .card img{
+        height: 250px;
+    }
+
+    #page-create-point form fieldset .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-point form fieldset .field-group .field + .field{
+        margin-left: 0;
+    }
+
+}
+
+/* configuração para a largura da tela fica no minimo */
+@media(min-width:1700px){
+    #page-home{
+        background-position-x: 40vw;
+    }
+}
+
+/* configuração para a altura da tela fica no maximo */
+@media(max-height:760px){
+    #page-home{
+        background-position-y: 200px;
+    }
+}

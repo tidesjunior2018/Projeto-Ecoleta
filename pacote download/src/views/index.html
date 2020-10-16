@@ -1,0 +1,65 @@
+{# n-extends => é uma extensao  #}
+{% extends "layout.html" %}
+
+{# n-set => para declarar uma variavel no html pelo nunjucks  #}
+
+{% set bodyId = "page-home" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+<!--É uma forma de identificar um elemento e deve ser única assim como o CPF. pode-se atribuir formatação a um elemento especial-->
+
+{# id="page-home" #}
+
+{% block content %}
+    <!--Class são uma forma de identificar um grupo de elementos .-->
+    <div class="content">
+        <!--é uma tag para colocar o conteúdo dentro sem representar nada-->
+
+        <header>
+            <!--cabeçalho pode conter nomes, logos , formulários de pesquisas e outros -->
+
+            <img src="/assets/logo.svg" alt="Logomarca">
+            <!-- <h3> quanto maior o numero do h a letra diminui, quanto menor o numero do h a letra aumenta Ecoleta </h3> -->
+
+            <a href="/create-point">
+                <!--span => é um elemento de nivel de linha-->
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+            <!--hyperlink ou link-->
+
+        </header>
+
+        <main>
+
+            <h1>
+                Seu marketplace de coleta de residuos
+            </h1>
+
+            <!--A tag <p> representa um paragrafo-->
+
+            <p>
+                Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente
+            </p>
+
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+
+        </main>
+
+    </div>
+{% endblock content %}
+
+{% block modal %}
+    {% include "partials/modal.html"%}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}

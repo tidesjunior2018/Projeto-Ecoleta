@@ -1,0 +1,39 @@
+/* elementos globais */
+
+:root{ /* representar o elemento html e é indêntico ao seletor html, 
+          exceto que a raiz 'maior do que o seletor html. (para não digitar as cores toda hora)
+          --nomedavariavel: cor*/
+    --title-color:#322153;
+    --primary-color:#34cb79;
+    
+
+}
+
+*{ /* seletor universal*/
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #f0f0f5; /*O código Hexadecimal para cores consiste em seis letras ou números precedidos do “#”.
+                    Os dois primeiros elementos representam a intensidade de vermelho, 
+                    o terceiro e quarto elementos representam a intensidade de verde e 
+                    os dois últimos a intensidade de azul.*/
+    -webkit-animation-smoothing: antialased; /* para o texto ficar mais bonito para leitura */
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
